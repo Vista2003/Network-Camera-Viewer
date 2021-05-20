@@ -3,19 +3,19 @@
 Public Class Dialog1
     Dim IP As String
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
-        If CheckBox1.Checked And CheckBox2.Checked And CheckBox3.Checked Then
+        If portbutton.Checked And httpsbutton.Checked And ddnsbutton.Checked Then
             IP = "https://" + TextBox1.Text + ":" + MaskedTextBox5.Text
-        ElseIf CheckBox3.Checked = True Then
+        ElseIf ddnsbutton.Checked = True Then
             IP = TextBox1.Text
-        ElseIf CheckBox3.Checked And CheckBox2.Checked Then
+        ElseIf ddnsbutton.Checked And httpsbutton.Checked Then
             IP = "https://" + TextBox1.Text
-        ElseIf CheckBox3.Checked And CheckBox1.Checked Then
+        ElseIf ddnsbutton.Checked And portbutton.Checked Then
             IP = "http://" + TextBox1.Text + ":" + MaskedTextBox5.Text
-        ElseIf CheckBox1.Checked = True And CheckBox2.Checked = True Then
+        ElseIf portbutton.Checked = True And httpsbutton.Checked = True Then
             IP = "https://" + MaskedTextBox1.Text + "." + MaskedTextBox2.Text + "." + MaskedTextBox3.Text + "." + MaskedTextBox4.Text + ":" + MaskedTextBox5.Text
-        ElseIf CheckBox1.Checked = True Then
+        ElseIf portbutton.Checked = True Then
             IP = "http://" + MaskedTextBox1.Text + "." + MaskedTextBox2.Text + "." + MaskedTextBox3.Text + "." + MaskedTextBox4.Text + ":" + MaskedTextBox5.Text
-        ElseIf CheckBox2.Checked = True Then
+        ElseIf httpsbutton.Checked = True Then
             IP = "https://" + MaskedTextBox1.Text + "." + MaskedTextBox2.Text + "." + MaskedTextBox3.Text + "." + MaskedTextBox4.Text
         Else
             IP = "http://" + MaskedTextBox1.Text + "." + MaskedTextBox2.Text + "." + MaskedTextBox3.Text + "." + MaskedTextBox4.Text
@@ -34,8 +34,8 @@ Public Class Dialog1
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles portbutton.CheckedChanged
+        If portbutton.Checked = True Then
             Label6.Visible = True
             MaskedTextBox5.Visible = True
         Else
@@ -45,8 +45,8 @@ Public Class Dialog1
 
     End Sub
 
-    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
-        If CheckBox3.Checked Then
+    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles ddnsbutton.CheckedChanged
+        If ddnsbutton.Checked Then
             Label1.Text = "URL:"
             TextBox1.Visible = True
             Label5.Text = "Enter the URL of the camera below:"

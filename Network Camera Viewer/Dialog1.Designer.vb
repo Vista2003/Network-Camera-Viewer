@@ -27,9 +27,9 @@ Partial Class Dialog1
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ddnsbutton = New System.Windows.Forms.CheckBox()
+        Me.httpsbutton = New System.Windows.Forms.CheckBox()
+        Me.portbutton = New System.Windows.Forms.CheckBox()
         Me.MaskedTextBox5 = New System.Windows.Forms.MaskedTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.MaskedTextBox4 = New System.Windows.Forms.MaskedTextBox()
@@ -93,35 +93,35 @@ Partial Class Dialog1
         Me.TextBox1.Size = New System.Drawing.Size(208, 20)
         Me.TextBox1.TabIndex = 30
         '
-        'CheckBox3
+        'ddnsbutton
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(15, 117)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(232, 17)
-        Me.CheckBox3.TabIndex = 29
-        Me.CheckBox3.Text = "I'm using a DDNS to connect to the camera"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.ddnsbutton.AutoSize = True
+        Me.ddnsbutton.Location = New System.Drawing.Point(15, 117)
+        Me.ddnsbutton.Name = "ddnsbutton"
+        Me.ddnsbutton.Size = New System.Drawing.Size(232, 17)
+        Me.ddnsbutton.TabIndex = 29
+        Me.ddnsbutton.Text = "I'm using a DDNS to connect to the camera"
+        Me.ddnsbutton.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'httpsbutton
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(15, 93)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(126, 17)
-        Me.CheckBox2.TabIndex = 28
-        Me.CheckBox2.Text = "Camera uses HTTPS"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.httpsbutton.AutoSize = True
+        Me.httpsbutton.Location = New System.Drawing.Point(15, 93)
+        Me.httpsbutton.Name = "httpsbutton"
+        Me.httpsbutton.Size = New System.Drawing.Size(126, 17)
+        Me.httpsbutton.TabIndex = 28
+        Me.httpsbutton.Text = "Camera uses HTTPS"
+        Me.httpsbutton.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'portbutton
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 70)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(207, 17)
-        Me.CheckBox1.TabIndex = 27
-        Me.CheckBox1.Text = "Camera uses an alternative HTTP port"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.portbutton.AutoSize = True
+        Me.portbutton.Location = New System.Drawing.Point(15, 70)
+        Me.portbutton.Name = "portbutton"
+        Me.portbutton.Size = New System.Drawing.Size(207, 17)
+        Me.portbutton.TabIndex = 27
+        Me.portbutton.Text = "Camera uses an alternative HTTP port"
+        Me.portbutton.UseVisualStyleBackColor = True
         '
         'MaskedTextBox5
         '
@@ -223,9 +223,9 @@ Partial Class Dialog1
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(352, 185)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.CheckBox3)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.ddnsbutton)
+        Me.Controls.Add(Me.httpsbutton)
+        Me.Controls.Add(Me.portbutton)
         Me.Controls.Add(Me.MaskedTextBox5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.MaskedTextBox4)
@@ -255,9 +255,9 @@ Partial Class Dialog1
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ddnsbutton As CheckBox
+    Friend WithEvents httpsbutton As CheckBox
+    Friend WithEvents portbutton As CheckBox
     Friend WithEvents MaskedTextBox5 As MaskedTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents MaskedTextBox4 As MaskedTextBox
